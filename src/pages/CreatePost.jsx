@@ -7,6 +7,7 @@ import axios from 'axios'
 import { imageUrls } from '../App'
 import './style.css'
 import Footer from '../components/Footer'
+import { Backend_Api_Endpoint } from '../App'
 
 const CreatePost = ({}) => {
 
@@ -31,7 +32,7 @@ const CreatePost = ({}) => {
 
             try {
 
-                await axios.post('http://localhost:8080/api/v1/post', form)
+                await axios.post(`${Backend_Api_Endpoint}/api/v1/post`, form)
                     .then((response) => {
                         console.log(response)
                     })
