@@ -31,13 +31,15 @@ router.post('/', async(req, res) =>{
     try {
 
         const {name, prompt, photo} = req.body;
-        const photoUrl = await cloudinary.uploader.upload(photo);
+        const photoUrl = await cloudinary.uploader.upload(photo, {
+            secure: true
+        });
     
     
         const newPost = await Post.create({
             name,
             prompt,
-            photo: photoUrl.url,
+            photo: photoUrl.secure_url,
         })
     
         res.status(201).json({success: true, data: newPost})
