@@ -16,7 +16,7 @@ import photo8 from './assets/bg-Images/photo8.jpg'
 
 export const imageUrls = [photo, photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8 ];
 
-export const Backend_Api_Endpoint =  "http://localhost:8080"
+export const Backend_Api_Endpoint =  "https://pixa-verse.onrender.com"
 
 const App = () =>{
 
